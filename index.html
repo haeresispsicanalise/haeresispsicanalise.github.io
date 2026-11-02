@@ -104,6 +104,14 @@ section{padding-block:clamp(2.5rem,6vw,4.5rem);border-top:1px solid var(--rule)}
 .call{max-width:var(--measure);margin-top:2.25rem;display:grid;gap:1rem;font-size:1rem}
 .call .kicker{color:var(--accent)}
 .call .sig{font-style:italic;color:var(--muted);font-size:.92rem}
+.jump{display:flex;flex-wrap:wrap;gap:.5rem 1.75rem;margin-top:1.25rem;font-weight:500}
+#programacao{scroll-margin-top:1.5rem}
+.group{margin:0 0 2.5rem}
+.group img{display:block;width:100%;height:auto;aspect-ratio:1600/1182;object-fit:cover;max-height:34rem}
+.group figcaption{margin-top:.6rem;font-size:.8rem;color:var(--muted);font-style:italic}
+.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:2rem 3rem}
+.people h3{color:var(--accent);padding-bottom:.6rem;margin-bottom:.8rem;border-bottom:1px solid var(--rule)}
+.people ul{list-style:none;margin:0;padding:0;display:grid;gap:.45rem}
 /* editora */
 .shelf{display:flex;align-items:flex-end;gap:.35rem;padding-bottom:0;border-bottom:10px solid var(--paper-2);flex-wrap:wrap}
 .spine{appearance:none;border:0;cursor:pointer;width:3.6rem;height:clamp(15rem,30vw,19rem);background:var(--c);color:var(--spine-ink);display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:.8rem 0;font-family:var(--serif);transition:transform .25s ease}
@@ -152,6 +160,7 @@ footer.band p{opacity:.9}
     <nav class="caps" aria-label="Seções">
       <a href="#reuniao">VIII Reunião Aberta</a>
       <a href="#editora">Editora</a>
+      <a href="#associacao">A Hæresis</a>
       <a href="#contato">Contato</a>
     </nav>
   </div>
@@ -170,7 +179,7 @@ footer.band p{opacity:.9}
         <p class="greek">αἵρεσις (haíresis)</p>
         <blockquote class="epigraph">Hæresis significa escolher outra coisa. A psicanálise só pode ser território de heresia: <em>psicanalisis territorium hæresis est</em>.</blockquote>
         <p class="epigraph-src">Cirlana Rodrigues de Souza, “Sobre a Hæresis Associação de Psicanálise” (2017)</p>
-        <p class="lede">Espaços de formação e transmissão em psicanálise lacaniana, sustentados pela leitura da letra freudiana e lacaniana e pela passagem à escrita. Desde 2017, em Uberlândia.</p>
+        <p class="lede">Espaços de formação e transmissão em psicanálise lacaniana, sustentados pela leitura da letra de Sigmund Freud e Jacques Lacan e pela passagem à escrita. Desde 2017, em Uberlândia.</p>
       </div>
     </div>
   </div>
@@ -183,6 +192,7 @@ footer.band p{opacity:.9}
       </div>
       <p class="question">Como o inconsciente, a partir do estabelecimento do nó borromeano, altera os modos de pensar e operar com o tempo?</p>
       <p style="margin-top:1rem;max-width:var(--measure)">A Reunião Aberta é a jornada anual da Hæresis: gratuita e aberta a todos os interessados em psicanálise, arte e literatura.</p>
+      <p class="jump"><a href="#programacao">Ver a programação completa ↓</a><a href="https://www.instagram.com/haeresispsicanalise/p/DexIdMplI2-/" target="_blank" rel="noopener">Programação no Instagram ↗</a></p>
 
       <div class="call">
         <p class="caps kicker">Chamada</p>
@@ -202,7 +212,7 @@ footer.band p{opacity:.9}
           <span class="mail"><code id="mail-r">haeresispsicanalise@gmail.com</code><button class="copy" type="button" data-copy="mail-r">Copiar</button></span></dd></div>
       </dl>
 
-      <div class="days">
+      <div class="days" id="programacao">
         <div class="day">
           <h3>Quinta-feira, 12 de novembro <span class="caps">Presencial</span></h3>
           <ol class="slots">
@@ -312,6 +322,27 @@ footer.band p{opacity:.9}
             <a class="dl" href="livros/escritos-abertos-vol-1.pdf" target="_blank" rel="noopener">Baixar o livro (PDF, 3,0 MB)</a>
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="associacao" aria-labelledby="associacao-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="caps kicker">Desde 12 de janeiro de 2017</p>
+        <h2 id="associacao-t">A Hæresis</h2>
+      </div>
+      <figure class="group">
+        <img src="img/reuniao-aberta-2025.jpg" width="1600" height="1182" loading="lazy" alt="Participantes da VII Reunião Aberta reunidos em uma sala, em duas fileiras, ao fim do evento.">
+        <figcaption>VII Reunião Aberta, novembro de 2025. Foto: Marília Cadima.</figcaption>
+      </figure>
+      <div class="people">
+        <div><h3 class="caps">Conselheiros</h3>
+          <ul><li>Aline Accioly</li><li>Cirlana Rodrigues de Souza</li><li>Germano Almeida Faria Fortunato Pereira</li></ul></div>
+        <div><h3 class="caps">Membros</h3>
+          <ul><li>Carolina Antônia Goulart de Paula</li><li>José Lucas Nunes de Assis</li><li>Markus Felipe de Oliveira Salles</li><li>Paula Caroline de Moura Burgarelli</li></ul></div>
+        <div><h3 class="caps">Comissões de trabalho</h3>
+          <ul><li>Comissão de Comunicação e Organização</li><li>Comissão Editorial</li><li>Comissão Financeira</li></ul></div>
       </div>
     </div>
   </section>
