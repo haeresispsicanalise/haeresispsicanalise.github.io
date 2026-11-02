@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hæresis Associação de Psicanálise</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Hæresis Associação de Psicanálise, Uberlândia (MG). VIII Reunião Aberta, Nas malhas do tempo, 12 e 13 de novembro de 2026. Coleção Escritos Abertos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&display=swap">
+<style>
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+/* Layout: uma coluna editorial, como a página de um livro da coleção; faixas de cor no alto e no pé, como na capa do vol. III. */
+:root{
+  --paper:#F3EEE4;
+  --paper-2:#EAE3D5;
+  --ink:#1C2230;
+  --muted:#5D5F66;
+  --rule:#CFC6B5;
+  --accent:#153A74;
+  --band:#153A74;
+  --band-ink:#F3EEE4;
+  --vol1:#14264A; --vol2:#15305F; --vol3:#153A74;
+  --spine-ink:#F3EEE4;
+  --serif:"Source Serif 4","Source Serif Pro",Georgia,"Times New Roman",serif;
+  --measure:62ch;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#11151D; --paper-2:#181D28; --ink:#ECE5D8; --muted:#A4A3A0; --rule:#2E3544;
+    --accent:#A0C4E8; --band:#153A74; --band-ink:#ECE5D8; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#11151D; --paper-2:#181D28; --ink:#ECE5D8; --muted:#A4A3A0; --rule:#2E3544;
+  --accent:#A0C4E8; --band:#153A74; --band-ink:#ECE5D8; color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:1.0625rem;line-height:1.6;font-optical-sizing:auto;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:.18em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+h1,h2,h3{font-weight:500;text-wrap:balance;margin:0;line-height:1.15}
+p{margin:0}
+.wrap{max-width:68rem;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.caps{text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;font-weight:500}
+
+/* faixa superior */
+.band{background:var(--band);color:var(--band-ink)}
+.band .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1.5rem;padding-block:.7rem}
+.band a{color:inherit;text-decoration:none}
+.band nav{display:flex;gap:1.25rem;flex-wrap:wrap}
+.band nav a:hover{text-decoration:underline}
+
+/* abertura */
+.open{padding-block:clamp(2.5rem,7vw,5rem) clamp(2rem,5vw,3.5rem)}
+.open .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.dea{margin:0}
+.dea img{display:block;width:100%;height:auto;border:1px solid var(--rule);background:#F3EEE4}
+.dea figcaption{margin-top:.6rem;font-size:.78rem;color:var(--muted);font-style:italic}
+.name{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:400;letter-spacing:-.01em}
+.name-sub{margin-top:.4rem}
+.greek{margin-top:2rem;font-size:1.05rem;color:var(--muted)}
+.epigraph{margin:1.25rem 0 0;padding:0;border:0;font-size:clamp(1.2rem,2.2vw,1.45rem);line-height:1.45;max-width:30ch}
+.epigraph em{font-style:italic}
+.epigraph-src{margin-top:.75rem;font-size:.85rem;color:var(--muted)}
+.lede{margin-top:2rem;max-width:var(--measure);padding-top:1.5rem;border-top:1px solid var(--rule)}
+
+/* seções */
+section{padding-block:clamp(2.5rem,6vw,4.5rem);border-top:1px solid var(--rule)}
+.sec-head{display:grid;gap:.6rem;max-width:var(--measure);margin-bottom:2.25rem}
+.sec-head h2{font-size:clamp(1.9rem,4.2vw,2.8rem);font-weight:400}
+.sec-head .kicker{color:var(--accent)}
+
+/* reunião */
+.question{font-size:clamp(1.15rem,2vw,1.35rem);font-style:italic;max-width:var(--measure)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1.25rem 2rem;margin:2rem 0 0;padding:1.25rem 0;border-block:1px solid var(--rule)}
+.facts div{min-width:0}
+.facts dt{color:var(--muted)}
+.facts dd{margin:.25rem 0 0}
+.mail{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .75rem}
+.mail code{font-family:var(--serif);font-size:1rem;user-select:all}
+.copy{font:inherit;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:none;border:1px solid currentColor;border-radius:2px;padding:.15rem .55rem;cursor:pointer}
+.copy:hover{background:var(--paper-2)}
+
+.days{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.5rem clamp(2rem,4vw,3.5rem);margin-top:2.75rem}
+.day h3{font-size:1.35rem;font-weight:500;padding-bottom:.6rem;border-bottom:2px solid var(--accent)}
+.day h3 span{display:block;margin-top:.2rem;color:var(--muted)}
+.slots{list-style:none;margin:0;padding:0}
+.slot{display:grid;grid-template-columns:4.2rem minmax(0,1fr);gap:1rem;padding-block:1.1rem;border-bottom:1px solid var(--rule)}
+.slot time{font-variant-numeric:tabular-nums;font-weight:600;font-size:.95rem;padding-top:.1rem}
+.slot h4{margin:0;font-size:1.02rem;font-weight:600;line-height:1.35}
+.slot ul{margin:.45rem 0 0;padding:0;list-style:none;display:grid;gap:.35rem}
+.slot li{font-size:.95rem;line-height:1.45}
+.slot li .who{color:var(--muted)}
+.slot .med{margin-top:.45rem;font-size:.88rem;color:var(--muted);font-style:italic}
+.slot.pause h4{font-weight:400;color:var(--muted)}
+
+.call{max-width:var(--measure);margin-top:2.25rem;display:grid;gap:1rem;font-size:1rem}
+.call .kicker{color:var(--accent)}
+.call .sig{font-style:italic;color:var(--muted);font-size:.92rem}
+/* editora */
+.shelf{display:flex;align-items:flex-end;gap:.35rem;padding-bottom:0;border-bottom:10px solid var(--paper-2);flex-wrap:wrap}
+.spine{appearance:none;border:0;cursor:pointer;width:3.6rem;height:clamp(15rem,30vw,19rem);background:var(--c);color:var(--spine-ink);display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:.8rem 0;font-family:var(--serif);transition:transform .25s ease}
+.spine .t{writing-mode:vertical-rl;transform:rotate(180deg);font-size:.9rem;line-height:1.1;max-height:72%;overflow:hidden;text-align:left}
+.spine .n{font-weight:600;font-size:.9rem;letter-spacing:.06em}
+.spine .c{writing-mode:vertical-rl;transform:rotate(180deg);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85}
+.spine[aria-pressed="true"]{transform:translateY(-.9rem)}
+.spine:hover{transform:translateY(-.4rem)}
+.spine[aria-pressed="true"]:hover{transform:translateY(-.9rem)}
+.shelf-note{margin-top:.8rem;font-size:.85rem;color:var(--muted)}
+.books{margin-top:2rem}
+.book[hidden]{display:none}
+.book{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:1rem 3rem;max-width:56rem}
+.book h3{font-size:clamp(1.5rem,3vw,2rem);font-weight:400;font-style:italic}
+.book .vol{color:var(--accent);margin-bottom:.6rem}
+.book dl{margin:0;display:grid;gap:.7rem}
+.book dt{color:var(--muted)}
+.book dd{margin:.1rem 0 0}
+.dl{display:inline-block;margin-top:1.4rem;padding:.6rem 1.1rem;background:var(--accent);color:var(--paper);text-decoration:none;font-weight:500}
+.dl:hover{opacity:.9}
+.launch{margin-top:1.4rem;padding:.9rem 1.1rem;border:1px solid var(--rule);background:var(--paper-2)}
+.about-col{max-width:var(--measure);margin-top:2.5rem;color:var(--muted);font-size:.98rem}
+
+/* contato e rodapé */
+.contact .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.5rem 3rem}
+.contact h2{font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:400}
+.contact dt{color:var(--muted)}
+.contact dd{margin:.3rem 0 1.1rem}
+footer.band .wrap{padding-block:1.1rem;font-size:.82rem}
+footer.band p{opacity:.9}
+
+@media (max-width:760px){
+  .open .wrap{grid-template-columns:1fr}
+  .dea{max-width:24rem}
+  .days{grid-template-columns:1fr}
+  .book{grid-template-columns:1fr}
+  .spine{width:3.1rem}
+}
+@media (prefers-reduced-motion:reduce){.spine{transition:none}}
+</style>
+</head>
+<body>
+<header class="band">
+  <div class="wrap">
+    <a href="#inicio" class="caps">Hæresis Associação de Psicanálise</a>
+    <nav class="caps" aria-label="Seções">
+      <a href="#reuniao">VIII Reunião Aberta</a>
+      <a href="#editora">Editora</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="open">
+    <div class="wrap">
+      <figure class="dea">
+        <img src="img/haeresis-dea.jpg" width="900" height="1270" alt="Gravura Haeresis Dea: figura feminina de pé, com orelhas de burro, cabeças de dragão e de boi junto aos ombros, um livro na mão e uma mantícora aos pés.">
+        <figcaption>Anton Eisenhoit, <em>Haeresis Dea</em>, 1589. Rijksmuseum, Amsterdã (domínio público).</figcaption>
+      </figure>
+      <div>
+        <h1 class="name">Hæresis</h1>
+        <p class="name-sub caps">Associação de Psicanálise · Uberlândia, MG</p>
+        <p class="greek">αἵρεσις (haíresis)</p>
+        <blockquote class="epigraph">Hæresis significa escolher outra coisa. A psicanálise só pode ser território de heresia: <em>psicanalisis territorium hæresis est</em>.</blockquote>
+        <p class="epigraph-src">Cirlana Rodrigues de Souza, “Sobre a Hæresis Associação de Psicanálise” (2017)</p>
+        <p class="lede">Espaços de formação e transmissão em psicanálise lacaniana, sustentados pela leitura da letra freudiana e lacaniana e pela passagem à escrita. Desde 2017, em Uberlândia.</p>
+      </div>
+    </div>
+  </div>
+
+  <section id="reuniao" aria-labelledby="reuniao-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="caps kicker">VIII Reunião Aberta · 12 e 13 de novembro de 2026</p>
+        <h2 id="reuniao-t">Nas malhas do tempo</h2>
+      </div>
+      <p class="question">Como o inconsciente, a partir do estabelecimento do nó borromeano, altera os modos de pensar e operar com o tempo?</p>
+      <p style="margin-top:1rem;max-width:var(--measure)">A Reunião Aberta é a jornada anual da Hæresis: gratuita e aberta a todos os interessados em psicanálise, arte e literatura.</p>
+
+      <div class="call">
+        <p class="caps kicker">Chamada</p>
+        <p>Na VII Reunião Aberta da Hæresis, em 2025, trabalhamos com o tema <em>A linguagem do equívoco e o fazer do analista em nosso tempo</em>. A equivocidade situa-se no cerne do fazer, da aposta e do trabalho no campo psicanalítico, bem como no modo de a-ssociarmos, a cada ano, por meio de dispositivos, espaços, textos e escritas. O equívoco é o que permite que as vozes aparentemente semelhantes se embaralhem, abrindo espaço para constituição de diversos arranjos topológicos, contando com as três casas do dizer: Real, Simbólico e Imaginário.</p>
+        <p>Ao final da VII Reunião, após dois dias de partilha das investigações e escritas dos participantes e associados, permanecemos com um resto caído da proposição temática, que incidiu justamente no tempo de conclusão dos trabalhos do ano: Tempo. Coube interrogar como o inconsciente, a partir do estabelecimento do nó borromeano, altera os modos de pensar e operar com o tempo. Diante do equívoco e sua propriedade indecidível, o sujeito é confrontado a decidir uma saída por meio de um ato – um movimento, um gesto, uma nova direção. Poderíamos, então, situar o tempo da decisão como uma quarta operação lógica da temporalidade, inserindo um quarto elo sinthomático aos arranjos do tempo lógico lacaniano, de três?</p>
+        <p>Em <em>O tempo lógico e a asserção da certeza antecipada</em>, Lacan formula três tempos lógicos implicados na saída do sujeito em sua decisão diante do impasse no campo da linguagem: instante de ver, tempo de compreender, momento de concluir. Disso, já se estabelece uma leitura não linear do tempo, mesmo que ainda estejamos no campo do desejo e, por isso, na incidência lógica da retroação (sincronia e diacronia) e na cadeia significante.</p>
+        <p>Souza (2025) em <em>Um significante é agora</em> propõe que a equivocidade poderia ser lida como uma quarta dimensão que, ao mesmo tempo, rompe e enlaça as malhas desses tempos, ao introduzir o movimento e o ato, e ao delinear o espaço entre eles, isto é, a distância que os aproxima, separando-os ao conjugá-los como ecos do topos do objeto a. A proposta, feita aqui, se situa a partir de uma outra compreensão de significante que remete à uma criação lacaniana que faz o orientável (significante em cadeia) ser constrangido pelo não orientável pela linguagem, exigindo uma decisão.</p>
+        <p>Essas teses recolocam em movimento a leitura da proposição lacaniana, segundo a qual o analista precisa estar “à altura de seu tempo”. Esse tempo não se situa nem à frente, nem atrás, mas articula-se ao futuro anterior, o tempo do a posteriori, próprio do inconsciente. Isso porque a psicanálise não é, e não pode ser, de seu próprio tempo. Tampouco pertence a outro tempo. Ela se inscreve em um tempo Outro e em um outro, produzindo enigma sobre as concepções de tempo vigentes. Poderíamos, então, afirmar que o tempo de uma análise é o tempo de um encontro sem medida? O presente do presente? E ainda, como investiga Accioly (2025), a inédita realização do que há de vivo em puro movimento de acontecimento?</p>
+        <p>Como analistas, estamos confrontados com a experiência do tempo – na transferência e no universo onírico. Os principais conceitos e fundamentos psicanalíticos tangenciam essa questão: repetição, transferência, final de análise, cura, direção de tratamento, constituição do sujeito, pulsão, desejo, objeto a, gozo. O infantil, tão presente nas análises de crianças e adultos, não possui idade, não corresponde a um momento específico nem se localiza em um único ponto de desenvolvimento. Relaciona-se com o que se nomeia como tempo. A questão se atualiza em tempos da fotografia – o tempo instantâneo. A lógica do instantâneo se contrapõe à do movimento em uma imagem sem negativo, instaurando um presente como um tempo de fotografia de negativo perdido. Como se sustentam, nesse contexto, os lugares cuja aposta é permanecer em movimento no tempo – as escolas, as análises, os espaços públicos e culturais?</p>
+        <p class="sig">Aline Accioly, Cirlana Rodrigues de Souza e Germano Almeida Faria Fortunato Pereira</p>
+      </div>
+
+      <dl class="facts">
+        <div><dt class="caps">Quando</dt><dd>Quinta e sexta, 12 e 13 de novembro</dd></div>
+        <div><dt class="caps">Onde</dt><dd>Museu de Arte Sacra<br>Praça Dr. Duarte, Fundinho, Uberlândia (MG)</dd></div>
+        <div><dt class="caps">Inscrição</dt><dd>Gratuita, vagas limitadas. Por e-mail:
+          <span class="mail"><code id="mail-r">haeresispsicanalise@gmail.com</code><button class="copy" type="button" data-copy="mail-r">Copiar</button></span></dd></div>
+      </dl>
+
+      <div class="days">
+        <div class="day">
+          <h3>Quinta-feira, 12 de novembro <span class="caps">Presencial</span></h3>
+          <ol class="slots">
+            <li class="slot"><time>8h30</time><div><h4>Mesa de abertura: Nas malhas do tempo</h4>
+              <ul><li><span class="who">Aline Accioly, Cirlana Rodrigues de Souza e Germano Almeida Faria Fortunato Pereira</span></li></ul></div></li>
+            <li class="slot"><time>9h</time><div><h4>Mesa 01: Projeto: a escrita da história da Hæresis Associação de Psicanálise</h4>
+              <ul><li>Memória, registro e reinscrição: a escrita da história da Hæresis Associação de Psicanálise<br><span class="who">Giovanni Izar Garcia Arnal Polotto, Iago Guimarães Granel, Jessica Rodrigues Solidade e Paula Caroline de Moura Burgarelli</span></li></ul></div></li>
+            <li class="slot"><time>10h30</time><div><h4>Mesa 02: Escrever o tempo, fazer a letra</h4>
+              <ul>
+                <li>O encontro, o desejo e seus caminhos · <span class="who">Carolina Antônia Goulart de Paula</span></li>
+                <li>Olhos sujos no relógio da torre: (des)fazer o tempo, com Proust, Benjamin, Clarice · <span class="who">Patrick Gert Bange</span></li>
+                <li>Ensaio sobre quando se (h)ouve uma análise · <span class="who">Giovanni Izar Garcia Arnal Polotto</span></li>
+              </ul><p class="med">Mediação: Aline Accioly</p></div></li>
+            <li class="slot pause"><time>12h30</time><div><h4>Intervalo de almoço</h4></div></li>
+            <li class="slot"><time>14h</time><div><h4>Mesa 03: Como a criança que não teme o tempo</h4>
+              <ul>
+                <li>Entre um desaparecimento e a possibilidade de ser esperada, surge a criança · <span class="who">Maria Tereza Perez</span></li>
+                <li>Medusa: ou, da palavra e do trabalho com crianças · <span class="who">Markus Felipe de Oliveira Salles</span></li>
+                <li>O tropeço na transferência com uma adolescente · <span class="who">Alessandra Lúcio de Sousa</span></li>
+                <li>O luto e a criança: variações de <em>Mebo</em> e o <em>Medo</em> · <span class="who">Cirlana Rodrigues de Souza</span></li>
+              </ul><p class="med">Mediação: Jessica Rodrigues Solidade</p></div></li>
+            <li class="slot"><time>18h</time><div><h4>Lançamento de livros na Livraria Plural</h4>
+              <ul>
+                <li><em>A linguagem do equívoco e o fazer do analista em nosso tempo</em><br><span class="who">Org. Aline Accioly e Cirlana Rodrigues de Souza. Editora Hæresis</span></li>
+                <li><em>Princípios psicanalíticos de infâncias e adolescências</em><br><span class="who">Org. Cirlana Rodrigues de Souza, Estanislau Alves da Silva Filho e Germano Almeida Faria Fortunato Pereira. Editora Fi</span></li>
+                <li><em>O espanto impoético da psicanálise</em><br><span class="who">Sérgio Prudente. Editora Escuta</span></li>
+              </ul></div></li>
+          </ol>
+        </div>
+
+        <div class="day">
+          <h3>Sexta-feira, 13 de novembro <span class="caps">Presencial</span></h3>
+          <ol class="slots">
+            <li class="slot"><time>8h30</time><div><h4>Mesa 04: Quanto se paga e quando se morre: <em>Réquiem</em> para o desejo?</h4>
+              <ul>
+                <li>Urgência pós-pandêmica: interrogar a morte como necessária · <span class="who">Germano Almeida Faria Fortunato Pereira</span></li>
+                <li>O caro necessário · <span class="who">José Lucas Nunes de Assis</span></li>
+              </ul><p class="med">Mediação: Cirlana Rodrigues de Souza</p></div></li>
+            <li class="slot"><time>10h30</time><div><h4>Mesa 05: O tempo do inconsciente é o ritmo da palavra</h4>
+              <ul>
+                <li>A busca pela leitura do inconsciente · <span class="who">Paula Caroline de Moura Burgarelli</span></li>
+                <li><em>Cooper</em>, inventor do sonho · <span class="who">Cirlana Rodrigues de Souza</span></li>
+                <li>Ideias ligeiras: experiências da fresta na análise, na literatura e na matemática · <span class="who">Tatiane de Medeiros</span></li>
+              </ul><p class="med">Mediação: Giovanni Izar Garcia Arnal Polotto</p></div></li>
+            <li class="slot pause"><time>12h30</time><div><h4>Intervalo de almoço</h4></div></li>
+            <li class="slot"><time>14h</time><div><h4>Mesa 06: Afinal, amanhã é outro dia</h4>
+              <ul>
+                <li>E o vento levou… · <span class="who">Jessica Rodrigues Solidade</span></li>
+                <li>Do tempo da transferência ao tempo da transmissão: sobre os finais de análise de analistas · <span class="who">Aline Accioly</span></li>
+              </ul><p class="med">Mediação: Iago Guimarães Granel</p></div></li>
+            <li class="slot"><time>16h</time><div><h4>Mesa 07: O tempo como questão epistemológica</h4>
+              <ul><li>O tempo como questão epistemológica fundamental da psicanálise · <span class="who">Sérgio Prudente</span></li></ul>
+              <p class="med">Mediação: Germano Almeida Faria Fortunato Pereira</p></div></li>
+            <li class="slot"><time>17h30</time><div><h4>Mesa de encerramento</h4>
+              <ul><li>Preparatória para a IX Reunião Aberta: Giros para 2027<br><span class="who">Aline Accioly, Cirlana Rodrigues de Souza e Germano Almeida Faria Fortunato Pereira</span></li></ul></div></li>
+            <li class="slot"><time>19h30</time><div><h4>Comemoração</h4></div></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="editora" aria-labelledby="editora-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="caps kicker">Editora Hæresis</p>
+        <h2 id="editora-t">Coleção Escritos Abertos</h2>
+        <p>A coleção publica trabalhos produzidos a partir dos espaços de ensino e transmissão e dos eventos organizados pela Hæresis. Cada volume registra uma Reunião Aberta. Acesso gratuito.</p>
+      </div>
+
+      <div class="shelf" role="group" aria-label="Volumes da coleção">
+        <button class="spine" type="button" style="--c:var(--vol1)" aria-pressed="false" aria-controls="vol-1" data-vol="1"><span class="c">Escritos Abertos</span><span class="t">Em que língua se conta de uma análise?</span><span class="n">I</span></button>
+        <button class="spine" type="button" style="--c:var(--vol2)" aria-pressed="false" aria-controls="vol-2" data-vol="2"><span class="c">Escritos Abertos</span><span class="t">Por falar em corpo, corpo por falar</span><span class="n">II</span></button>
+        <button class="spine" type="button" style="--c:var(--vol3)" aria-pressed="true" aria-controls="vol-3" data-vol="3"><span class="c">Escritos Abertos</span><span class="t">A linguagem do equívoco e o fazer do analista em nosso tempo</span><span class="n">III</span></button>
+      </div>
+      <p class="shelf-note">Toque numa lombada para ver o volume.</p>
+
+      <div class="books">
+        <article class="book" id="vol-3">
+          <div><p class="caps vol">Volume III · 2026</p><h3>A linguagem do equívoco e o fazer do analista em nosso tempo</h3></div>
+          <div>
+            <dl>
+              <div><dt class="caps">Organização</dt><dd>Aline Accioly e Cirlana Rodrigues de Souza</dd></div>
+              <div><dt class="caps">Reunião</dt><dd>VII Reunião Aberta, novembro de 2025</dd></div>
+            </dl>
+            <p class="launch">Lançamento em 12 de novembro de 2026, às 18h, na Livraria Plural, durante a VIII Reunião Aberta. O livro estará disponível aqui depois do lançamento.</p>
+          </div>
+        </article>
+        <article class="book" id="vol-2" hidden>
+          <div><p class="caps vol">Volume II · 2025</p><h3>Por falar em corpo, corpo por falar</h3></div>
+          <div>
+            <dl>
+              <div><dt class="caps">Organização</dt><dd>Aline Accioly, Cirlana Rodrigues de Souza e Germano Almeida Faria Fortunato Pereira</dd></div>
+              <div><dt class="caps">Reunião</dt><dd>VI Reunião Aberta, dezembro de 2024</dd></div>
+            </dl>
+            <a class="dl" href="livros/escritos-abertos-vol-2.pdf" target="_blank" rel="noopener">Baixar o livro (PDF, 2,8 MB)</a>
+          </div>
+        </article>
+        <article class="book" id="vol-1" hidden>
+          <div><p class="caps vol">Volume I · 2024</p><h3>Em que língua se conta de uma análise?</h3></div>
+          <div>
+            <dl>
+              <div><dt class="caps">Organização</dt><dd>Aline Accioly, Cirlana Rodrigues de Souza e Germano Almeida Faria Fortunato Pereira</dd></div>
+              <div><dt class="caps">Reunião</dt><dd>V Reunião Aberta, dezembro de 2023</dd></div>
+              <div><dt class="caps">ISBN</dt><dd style="font-variant-numeric:tabular-nums">978-65-985700-0-2</dd></div>
+            </dl>
+            <a class="dl" href="livros/escritos-abertos-vol-1.pdf" target="_blank" rel="noopener">Baixar o livro (PDF, 3,0 MB)</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contact" aria-labelledby="contato-t">
+    <div class="wrap">
+      <div>
+        <h2 id="contato-t">Contato</h2>
+        <p style="margin-top:.8rem;max-width:34ch;color:var(--muted)">Informações sobre os Espaços, a Reunião Aberta e a Editora. Inscrições sempre por e-mail.</p>
+      </div>
+      <dl>
+        <dt class="caps">E-mail</dt>
+        <dd class="mail"><code id="mail-c">haeresispsicanalise@gmail.com</code><button class="copy" type="button" data-copy="mail-c">Copiar</button></dd>
+        <dt class="caps">Instagram</dt>
+        <dd><a href="https://www.instagram.com/haeresispsicanalise/" target="_blank" rel="noopener">@haeresispsicanalise</a></dd>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p>Hæresis Associação de Psicanálise · Uberlândia, MG · desde 2017</p>
+    <p>Site em reconstrução</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var spines=[].slice.call(document.querySelectorAll('.spine'));
+  spines.forEach(function(s){
+    s.addEventListener('click',function(){
+      spines.forEach(function(o){
+        var on=o===s; o.setAttribute('aria-pressed',on?'true':'false');
+        document.getElementById('vol-'+o.dataset.vol).hidden=!on;
+      });
+    });
+  });
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click',function(){
+      var el=document.getElementById(b.dataset.copy), t=el.textContent.trim();
+      function sel(){var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r);}
+      var done=function(){b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar'},1800)};
+      try{navigator.clipboard.writeText(t).then(done,function(){sel()})}catch(e){sel()}
+    });
+  });
+})();
+</script>
+</body>
+</html>
